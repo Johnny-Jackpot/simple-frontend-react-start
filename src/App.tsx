@@ -1,6 +1,6 @@
 import "./App.css";
 import {StatefullForm} from "./components/UseReduser/StatefullForm.tsx";
-import Counter from "./components/UseState/Form.tsx";
+import Counter from "./components/UseState/Counter.tsx";
 
 function App() {
   return (
