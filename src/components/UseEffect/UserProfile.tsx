@@ -32,7 +32,13 @@ const UserProfile: React.FC = () => {
   };
 
   useEffect(() => {
-    fetchUserData();
+    const intervalId = setInterval(() => {
+      fetchUserData();
+    }, 2000);
+
+    return () => {
+      clearInterval(intervalId);
+    }
   }, [])
 
   if (loading) {
