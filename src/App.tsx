@@ -1,5 +1,5 @@
 import "./App.css";
-import {StatefullForm} from "./components/StatefullForm.tsx";
+import {StatefullForm} from "./components/UseReduser/StatefullForm.tsx";
 
 function App() {
   return (
