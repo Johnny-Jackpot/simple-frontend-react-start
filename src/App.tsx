@@ -1,5 +1,6 @@
 import "./App.css";
 import {StatefullForm} from "./components/UseReduser/StatefullForm.tsx";
+import Counter from "./components/UseState/Form.tsx";
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       />
 
       <div className="component-container">
-        <StatefullForm />
+        <Counter />
+        {/*<StatefullForm />*/}
       </div>
     </>
   );
