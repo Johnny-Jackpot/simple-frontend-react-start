@@ -1,21 +1,22 @@
 import "./App.css";
-import { StatefullForm } from "./components/UseReduser/StatefullForm.tsx";
-import Counter from "./components/UseState/Counter.tsx";
-import Form from "./components/UseState/Form.tsx";
-import UserProfile from "./components/UseEffect/UserProfile.tsx";
-import CurrencyContext from "./components/UseContext/CurrencyContext.tsx";
-import { useState } from "react";
-import CurrenciesContainer from "./components/UseContext/CurrenciesContainer.tsx";
-import CalculationWithoutMemo from "./components/UseMemo/CalculationWithoutMemo.tsx";
-import UseMemoCalculation from "./components/UseMemo/UseMemoCalculation.tsx";
+// import { StatefullForm } from "./components/UseReduser/StatefullForm.tsx";
+// import Counter from "./components/UseState/Counter.tsx";
+// import Form from "./components/UseState/Form.tsx";
+// import UserProfile from "./components/UseEffect/UserProfile.tsx";
+// import CurrencyContext from "./components/UseContext/CurrencyContext.tsx";
+// import { useState } from "react";
+import MeasuredHeight from "./components/UseLayoutEffect/MeasuredHeight.tsx";
+// import CurrenciesContainer from "./components/UseContext/CurrenciesContainer.tsx";
+// import CalculationWithoutMemo from "./components/UseMemo/CalculationWithoutMemo.tsx";
+// import UseMemoCalculation from "./components/UseMemo/UseMemoCalculation.tsx";
 
 function App() {
   // const [price, setPrice] = useState(0);
-  const [count, setCount] = useState(0);
-  const [myArray, setMyArray] = useState<number[]>([]);
-  const handleSetMyArray = () => {
-    setMyArray([...myArray, Math.floor(Math.random() * 100)]);
-  }
+  // const [count, setCount] = useState(0);
+  // const [myArray, setMyArray] = useState<number[]>([]);
+  // const handleSetMyArray = () => {
+  //   setMyArray([...myArray, Math.floor(Math.random() * 100)]);
+  // }
 
   return (
     <>
@@ -42,15 +43,17 @@ function App() {
         {/*  <CurrenciesContainer/>*/}
         {/*</CurrencyContext.Provider>*/}
 
-        <div>Counter value: {count}</div>
-        <button className="button" onClick={() => setCount(count + 1)}>
-          Re-render
-        </button>
-        <button className="button" onClick={handleSetMyArray}>
-          Change my array
-        </button>
-        <CalculationWithoutMemo numbers={myArray}/>
-        <UseMemoCalculation numbers={myArray}/>
+        {/*<div>Counter value: {count}</div>*/}
+        {/*<button className="button" onClick={() => setCount(count + 1)}>*/}
+        {/*  Re-render*/}
+        {/*</button>*/}
+        {/*<button className="button" onClick={handleSetMyArray}>*/}
+        {/*  Change my array*/}
+        {/*</button>*/}
+        {/*<CalculationWithoutMemo numbers={myArray}/>*/}
+        {/*<UseMemoCalculation numbers={myArray}/>*/}
+
+        <MeasuredHeight />
       </div>
     </>
   );
