@@ -1,4 +1,6 @@
 import "./App.css";
+import { CustomInput } from "./components/UseImperativeHandle/CustomInput.tsx";
+import { useRef } from "react";
 // import { StatefullForm } from "./components/UseReduser/StatefullForm.tsx";
 // import Counter from "./components/UseState/Counter.tsx";
 // import Form from "./components/UseState/Form.tsx";
@@ -7,7 +9,7 @@ import "./App.css";
 // import { useState } from "react";
 // import MeasuredHeight from "./components/UseLayoutEffect/MeasuredHeight.tsx";
 // import UseRefExample from "./components/UseRef/UseRefExample.tsx";
-import LongList from "./components/UseTransition/LongList.tsx";
+// import LongList from "./components/UseTransition/LongList.tsx";
 // import CurrenciesContainer from "./components/UseContext/CurrenciesContainer.tsx";
 // import CalculationWithoutMemo from "./components/UseMemo/CalculationWithoutMemo.tsx";
 // import UseMemoCalculation from "./components/UseMemo/UseMemoCalculation.tsx";
@@ -19,6 +21,14 @@ function App() {
   // const handleSetMyArray = () => {
   //   setMyArray([...myArray, Math.floor(Math.random() * 100)]);
   // }
+
+  const inputRef = useRef<CustomInput>(null);
+  const handleFocus = () => {
+      inputRef.current?.focus();
+  };
+  const handleClear = () => {
+      inputRef.current?.clear();
+  };
 
   return (
     <>
@@ -56,7 +66,14 @@ function App() {
         {/*<UseMemoCalculation numbers={myArray}/>*/}
         {/*<UseRefExample />*/}
         {/*<MeasuredHeight />*/}
-        <LongList />
+        {/*<LongList />*/}
+        <CustomInput ref={inputRef} />
+        <button className="button" onClick={handleFocus}>
+          Focus
+        </button>
+        <button className="button" onClick={handleClear}>
+          Clear
+        </button>
       </div>
     </>
   );
