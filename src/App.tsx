@@ -5,8 +5,9 @@ import "./App.css";
 // import UserProfile from "./components/UseEffect/UserProfile.tsx";
 // import CurrencyContext from "./components/UseContext/CurrencyContext.tsx";
 // import { useState } from "react";
-import MeasuredHeight from "./components/UseLayoutEffect/MeasuredHeight.tsx";
-import UseRefExample from "./components/UseRef/UseRefExample.tsx";
+// import MeasuredHeight from "./components/UseLayoutEffect/MeasuredHeight.tsx";
+// import UseRefExample from "./components/UseRef/UseRefExample.tsx";
+import LongList from "./components/UseTransition/LongList.tsx";
 // import CurrenciesContainer from "./components/UseContext/CurrenciesContainer.tsx";
 // import CalculationWithoutMemo from "./components/UseMemo/CalculationWithoutMemo.tsx";
 // import UseMemoCalculation from "./components/UseMemo/UseMemoCalculation.tsx";
@@ -53,8 +54,9 @@ function App() {
         {/*</button>*/}
         {/*<CalculationWithoutMemo numbers={myArray}/>*/}
         {/*<UseMemoCalculation numbers={myArray}/>*/}
-        <UseRefExample />
+        {/*<UseRefExample />*/}
         {/*<MeasuredHeight />*/}
+        <LongList />
       </div>
     </>
   );
